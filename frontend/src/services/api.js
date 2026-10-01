@@ -3,9 +3,7 @@
  * Handles network requests to the FastAPI backend.
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL !== undefined && import.meta.env.VITE_API_BASE_URL !== ""
-  ? import.meta.env.VITE_API_BASE_URL
-  : "/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 /**
  * Checks backend health status
@@ -41,7 +39,7 @@ export async function checkBackendHealth() {
  */
 export async function fetchVoices(locale = "en-") {
   try {
-    const url = locale 
+    const url = locale
       ? `${API_BASE}/tts/voices?locale=${encodeURIComponent(locale)}`
       : `${API_BASE}/tts/voices`;
 
