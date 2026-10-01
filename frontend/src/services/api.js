@@ -3,7 +3,7 @@
  * Handles network requests to the FastAPI backend.
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL;
+const API_BASE = "https://echoread-ewtf.onrender.com/api";
 
 /**
  * Checks backend health status
