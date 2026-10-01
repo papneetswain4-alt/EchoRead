@@ -3,8 +3,11 @@
  * Handles network requests to the FastAPI backend.
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL !== undefined && import.meta.env.VITE_API_BASE_URL !== ""
-  ? import.meta.env.VITE_API_BASE_URL
+// Normalize API base URL: defaults to '/api' for Vite dev proxy,
+// and ensures deployed production URLs (e.g. on Render) cleanly target the /api prefix without duplication.
+const rawBase = (import.meta.env.VITE_API_BASE_URL || "").trim().replace(/\/+$/, "");
+const API_BASE = rawBase
+  ? (rawBase.endsWith("/api") ? rawBase : `${rawBase}/api`)
   : "/api";
 
 /**

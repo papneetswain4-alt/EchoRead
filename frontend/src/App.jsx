@@ -295,7 +295,7 @@ export function App() {
           <div className="offline-banner-content">
             <span className="offline-banner-dot" aria-hidden="true"></span>
             <span>
-              Can&apos;t reach the server. Start FastAPI on <code>127.0.0.1:8000</code>
+              Can&apos;t reach the speech server. Please verify the backend connection.
             </span>
           </div>
           <div className="offline-banner-actions">

@@ -1,0 +1,23 @@
+# Render Infrastructure as Code Blueprint
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: echoread-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    region: oregon
+    buildCommand: npm install && bash scripts/setup-python.sh
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: PYTHON_EXECUTABLE
+        value: ./venv/bin/python
+      - key: PYTHON_SCRIPT_TIMEOUT_MS
+        value: "60000"
+      - key: MAX_CONCURRENT_TTS_JOBS
+        value: "5"

@@ -1,0 +1,32 @@
+{
+  "name": "echoread-backend",
+  "version": "0.1.0",
+  "description": "EchoRead Node.js Express backend with Python Edge TTS engine",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "build": "bash scripts/setup-python.sh",
+    "test": "node --test tests/api.test.js",
+    "setup:python": "bash scripts/setup-python.sh"
+  },
+  "keywords": [
+    "echoread",
+    "tts",
+    "express",
+    "edge-tts",
+    "speech-synthesis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

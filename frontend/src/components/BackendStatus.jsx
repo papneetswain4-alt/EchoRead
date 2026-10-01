@@ -23,7 +23,7 @@ export function BackendStatus({ backendStatus, onRefresh }) {
 
       <div className="diagnostic-grid">
         <div className="diagnostic-item">
-          <span className="diagnostic-label">FastAPI Status</span>
+          <span className="diagnostic-label">Backend Status</span>
           <span
             className="diagnostic-val"
             style={{ color: connected ? 'var(--color-success)' : 'var(--color-error)' }}
@@ -61,7 +61,7 @@ export function BackendStatus({ backendStatus, onRefresh }) {
           borderRadius: 'var(--radius-sm)',
           border: '1px solid rgba(239, 68, 68, 0.2)'
         }}>
-          <strong>Connection error:</strong> {error}. Ensure FastAPI is running on <code>http://127.0.0.1:8000</code>.
+          <strong>Connection error:</strong> {error}. Ensure the backend service is running and reachable.
         </div>
       )}
     </div>

@@ -1,0 +1,25 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Python virtual environment & cache
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Temporary generated audio files
+*.mp3
+
+# OS generated files
+.DS_Store
+Thumbs.db

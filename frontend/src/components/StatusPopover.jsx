@@ -54,7 +54,7 @@ export function StatusPopover({ backendStatus, onRefresh, isOpen, onClose }) {
 
       <div className="status-popover-body">
         <div className="status-metric-row">
-          <span className="status-metric-label">FastAPI Backend</span>
+          <span className="status-metric-label">Backend Status</span>
           <span className={`status-metric-badge ${connected ? 'badge-connected' : 'badge-unreachable'}`}>
             {connected ? 'Connected (200)' : 'Unreachable'}
           </span>
@@ -81,7 +81,7 @@ export function StatusPopover({ backendStatus, onRefresh, isOpen, onClose }) {
 
         {error && (
           <div className="status-popover-alert" role="alert">
-            <strong>Server unreachable:</strong> Ensure FastAPI is running on <code>http://127.0.0.1:8000</code>.
+            <strong>Server unreachable:</strong> Ensure the backend service is running and reachable.
           </div>
         )}
       </div>
